@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Smart-Agro</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> Smart-Agro
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#crop-recommendation" class="nav__link">Crop Recommendations</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <img src="assets/img/crop2.png" alt="" class="home__img">
+
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Smart-Agro: <br> Smart Crop Recommendations
+                    </h1>
+                    <p class="home__description">
+                        Smart Crops, Smart Choices with Smart-Agro!
+                    </p>
+                </div>
+
+
+            </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container grid">
+                <img src="assets/img/about.png" alt="" class="about__img">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Who we are & <br> why choose us
+                    </h2>
+
+                    <p class="about__description">
+                        Our website is packed with amazing features to revolutionize farming! With our machine
+                        learning-powered crop recommendation, farmers can make smart decisions using factors like
+                        rainfall, soil nutrients, and weather conditions. Plus, our advanced plant disease detection,
+                        driven by deep learning models, ensures accurate and efficient identification of crop ailments.
+                    </p>
+
+                    <div class="about__details">
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Advanced plant disease detection.
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Crop recommendation.
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Best product recommendations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== STEPS ====================-->
+        <section class="steps section container">
+            <div class="steps__bg">
+                <h2 class="section__title-center steps__title">
+                    How to use the application for <br> disease detection.
+                </h2>
+
+                <div class="steps__container grid">
+                    <div class="steps__card">
+                        <div class="steps__card-number">01</div>
+                        <h3 class="steps__card-title">Choose crop type</h3>
+                        <p class="steps__card-description">
+                            We have several varieties crops you can choose from.
+                        </p>
+                    </div>
+
+                    <div class="steps__card">
+                        <div class="steps__card-number">02</div>
+                        <h3 class="steps__card-title">Upload an image of the infected leaf</h3>
+                        <p class="steps__card-description">
+                            Once your upload the leaf image, we move to the next step which disease detection.
+                        </p>
+                    </div>
+
+                    <div class="steps__card">
+                        <div class="steps__card-number">03</div>
+                        <h3 class="steps__card-title">Get diagnosis and recommendations</h3>
+                        <p class="steps__card-description">
+                            After disease is detected , you will receive the correct product recommendations to protect
+                            your crops.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PRODUCTS ====================-->
+        <section class="product section container" id="products">
+            <h2 class="section__title-center">
+                Disease detector
+            </h2>
+
+            <div class="product__container grid">
+
+                <article class="product__card">
+                    <a href="#">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/corn2.png" alt="" class="product__img">
+
+                        <h3 class="product__title">Corn</h3>
+
+                        <!-- <button class="button--flex product__button">
+                        <i class="ri-leaf-fill-line"></i>
+                    </button> -->
+                    </a>
+                </article>
+
+
+
+                <article class="product__card">
+                    <a href="#">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/tomato2.png" alt="" class="product__img">
+
+                        <h3 class="product__title">Tomato</h3>
+
+                        <!-- <button class="button--flex product__button">
+                        <i class="ri-leaf-fill-line"></i>
+                    </button> -->
+                    </a>
+                </article>
+
+                <article class="product__card">
+                    <a href="#">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/grapes2.png" alt="" class="product__img">
+
+                        <h3 class="product__title">Grapes</h3>
+
+                        <!-- <button class="button--flex product__button">
+                        <i class="ri-leaf-fill-line"></i>
+                    </button> -->
+                    </a>
+                </article>
+
+                <article class="product__card">
+                    <a href="#">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/potato2.png" alt="" class="product__img">
+
+                        <h3 class="product__title">Potato</h3>
+
+                        <!-- <button class="button--flex product__button">
+                        <i class="ri-leaf-fill-line"></i>
+                    </button> -->
+                    </a>
+                </article>
+
+                <article class="product__card">
+                    <a href="#">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/cotton2.png" alt="" class="product__img">
+
+                        <h3 class="product__title">Cotton</h3>
+
+                        <!-- <button class="button--flex product__button">
+                        <i class="ri-leaf-fill-line"></i>
+                    </button> -->
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== Crop-recommendations ====================-->
+        <section class="questions section" id="crop-recommendations">
+            <h2 class="section__title-center questions__title container">
+                Crop Recommendations <br> System
+            </h2>
+
+            <div class="questions__container container grid">
+                <div class="questions__group">
+                    <a href="#">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-bluesky-line"></i>
+                                <h3 class="questions__item-title">
+                                    Want to know what crop would suit your field?
+                                </h3>
+                            </header>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!--==================== CONTACT TEAM====================-->
+        <section class="contact section container" id="contact">
+            <div class="team-section">
+                <h2 class="team-title">Our Team</h2>
+                <div class="team-container">
+                    <!-- Team Member Card for Alka -->
+                    <div class="team-member">
+                        <!-- <img src="alka.jpg" alt="Alka" class="team-photo"> -->
+                        <h3 class="member-name">Alka</h3>
+                        <p class="member-role">B.Tech | CSE-AI<br>IGDTUW</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card for Vinisky -->
+                    <div class="team-member">
+                        <!-- <img src="vinisky.jpg" alt="Vinisky" class="team-photo"> -->
+                        <h3 class="member-name">Vinisky</h3>
+                        <p class="member-role">B.Tech | CSE-AI<br>IGDTUW</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card for Kritika -->
+                    <div class="team-member">
+                        <!-- <img src="kritika.jpg" alt="Kritika" class="team-photo"> -->
+                        <h3 class="member-name">Kritika</h3>
+                        <p class="member-role">B.Tech | CSE-AI<br>IGDTUW</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card for Manya -->
+                    <div class="team-member">
+                        <!-- <img src="manya.jpg" alt="Manya" class="team-photo"> -->
+                        <h3 class="member-name">Manya</h3>
+                        <p class="member-role">B.Tech | CSE-AI<br>IGDTUW</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <p class="footer__copy">&#169; Smart-Agro. All rigths reserved</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
