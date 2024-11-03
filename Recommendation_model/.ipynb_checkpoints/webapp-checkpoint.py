@@ -2,10 +2,10 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import sklearn
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 import os
+import cv2
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import classification_report
@@ -19,11 +19,13 @@ from sklearn.preprocessing import LabelEncoder
 
 # Display Images
 # import Image from pillow to open images
-from PIL import Image
-img = Image.open("crop.jpg")
+# img = cv2.imread('crop.jpg')
+# from PIL import Image
+# img = Image.open('crop.jpg')
 # display image using streamlit
 # width is used to set the width of an image
-st.image(img)
+
+# st.image(img)
 
 df= pd.read_csv('Crop_recommendation.csv')
 
@@ -99,3 +101,4 @@ def main():
 ## Running the main function
 if __name__ == '__main__':
     main()
+
