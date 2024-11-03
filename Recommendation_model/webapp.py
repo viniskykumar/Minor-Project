@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 import os
+import sklearn
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import classification_report
