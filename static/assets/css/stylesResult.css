@@ -1,0 +1,59 @@
+/* ================== Global Styles ================== */
+body {
+    font-family: "Poppins", sans-serif; /* Choose a modern, clean font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light background color for better contrast */
+    color: #333; /* Dark text color for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height for centering content */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger title for impact */
+    color: #4CAF50; /* Dark green color for headings */
+    margin-bottom: 1rem; /* Spacing below the title */
+}
+
+p {
+    font-size: 1.2rem; /* Slightly larger text for readability */
+    margin: 0.5rem 0; /* Spacing between paragraphs */
+    text-align: center; /* Center align for aesthetics */
+}
+
+strong {
+    color: #4CAF50; /* Green color for important information */
+}
+
+a {
+    display: inline-block; /* Make link look like a button */
+    margin-top: 2rem; /* Spacing above the link */
+    padding: 0.75rem 1.5rem; /* Padding for button effect */
+    font-size: 1.2rem; /* Larger font for the link */
+    color: #fff; /* White text color for contrast */
+    background-color: #4CAF50; /* Green background for the button */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+a:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* ================== Responsive Design ================== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+    p {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+    a {
+        font-size: 1rem; /* Smaller button on mobile */
+        padding: 0.5rem 1rem; /* Smaller padding for the button */
+    }
+}
