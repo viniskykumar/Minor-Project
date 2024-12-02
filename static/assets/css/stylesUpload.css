@@ -1,0 +1,110 @@
+/* Reset & General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #4CAF50;
+    padding: 1rem;
+}
+.nav__logo {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.change-theme {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.change-theme:hover {
+    color: #f4f4f9;
+}
+
+/* Home Form Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.home__container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.home__title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Custom Choose File Button */
+.choose-file-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #006400; /* Dark green */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.choose-file-button:hover {
+    background-color: #004d00; /* Darker green on hover */
+}
+
+/* Upload Button */
+.upload-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #4CAF50; /* Bright green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.upload-button:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+
+/* Image Preview */
+.image-preview {
+    margin: 1rem 0;
+}
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #f4f4f9;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}

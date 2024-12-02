@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}">
 
     <title>Smart-Agro</title>
 </head>
@@ -64,7 +64,7 @@
         <!--==================== HOME ====================-->
         <section class="home" id="home">
             <div class="home__container container grid">
-                <img src="assets/img/crop2.png" alt="" class="home__img">
+                <img src="{{ url_for('static', filename='assets/img/crop2.png') }}" alt="" class="home__img">
 
                 <div class="home__data">
                     <h1 class="home__title">
@@ -83,7 +83,7 @@
         <!--==================== ABOUT ====================-->
         <section class="about section container" id="about">
             <div class="about__container grid">
-                <img src="assets/img/about.png" alt="" class="about__img">
+                <img src="{{ url_for('static', filename='assets/img/about.png') }}" alt="" class="about__img">
 
                 <div class="about__data">
                     <h2 class="section__title about__title">
@@ -163,7 +163,7 @@
                     <a href="#">
                         <div class="product__circle"></div>
 
-                        <img src="assets/img/corn2.png" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/corn2.png') }}" alt="" class="product__img">
 
                         <h3 class="product__title">Corn</h3>
 
@@ -176,10 +176,10 @@
 
 
                 <article class="product__card">
-                    <a href="#">
+                    <a href="{{ url_for('upload') }}">
                         <div class="product__circle"></div>
 
-                        <img src="assets/img/tomato2.png" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/tomato2.png') }}" alt="" class="product__img">
 
                         <h3 class="product__title">Tomato</h3>
 
@@ -193,7 +193,7 @@
                     <a href="#">
                         <div class="product__circle"></div>
 
-                        <img src="assets/img/grapes2.png" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/grapes2.png') }}" alt="" class="product__img">
 
                         <h3 class="product__title">Grapes</h3>
 
@@ -207,7 +207,7 @@
                     <a href="#">
                         <div class="product__circle"></div>
 
-                        <img src="assets/img/potato2.png" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/potato2.png') }}" alt="" class="product__img">
 
                         <h3 class="product__title">Potato</h3>
 
@@ -221,7 +221,7 @@
                     <a href="#">
                         <div class="product__circle"></div>
 
-                        <img src="assets/img/cotton2.png" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/cotton2.png') }}" alt="" class="product__img">
 
                         <h3 class="product__title">Cotton</h3>
 
@@ -320,10 +320,10 @@
     </a>
 
     <!--=============== SCROLL REVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/scrollreveal.min.js') }}"></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
 </body>
 
 </html>
