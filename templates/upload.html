@@ -3,50 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomato Disease Detection</title>
+    <title>{{ crop.capitalize() }} Disease Detection</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/stylesUpload.css') }}">
 </head>
 <body>
     <main class="main">
         <section class="home">
             <div class="home__container container">
-                <h1 class="home__title">Upload an Image of the Tomato Plant</h1>
-                <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data" class="home__form" id="uploadForm">
-                    <!-- Hidden file input field -->
+                <h1 class="home__title">Upload an Image of the {{ crop.capitalize() }} Plant</h1>
+                <form action="{{ url_for('predict', crop=crop) }}" method="post" enctype="multipart/form-data" class="home__form" id="uploadForm">
                     <input type="file" name="file" id="fileInput" style="display: none;" required>
-                    
-                    <!-- Custom 'Choose File' button -->
                     <label for="fileInput" class="choose-file-button">Choose File</label>
-
-                    <!-- Predict button -->
                     <button type="submit" class="button upload-button">Predict Disease</button>
                 </form>
-
-                <!-- Image preview section -->
                 <div id="imagePreview" class="image-preview"></div>
-
                 <a href="{{ url_for('index') }}" class="button button--link">Go back to Home</a>
             </div>
         </section>
     </main>
-
-
-    <script src="{{ url_for('static', filename='assets/js/upload.js') }}"></script>
     <script>
-        // JavaScript to preview the uploaded image
-        const fileInput = document.getElementById("fileInput");
-        const imagePreview = document.getElementById("imagePreview");
-
-        fileInput.addEventListener("change", () => {
-            const file = fileInput.files[0];
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('imagePreview');
+        
             if (file) {
                 const reader = new FileReader();
-                reader.onload = () => {
-                    imagePreview.innerHTML = `<img src="${reader.result}" alt="Uploaded Image">`;
+                reader.onload = function(e) {
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;" />`;
                 };
                 reader.readAsDataURL(file);
             }
         });
-    </script>
+        </script>
+        
 </body>
 </html>
+

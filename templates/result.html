@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease Prediction Result</title>
+    <title>{{ crop.capitalize() }} Disease Prediction Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/stylesResult.css') }}">
 </head>
 <body>
-    <h1>Prediction Result</h1>
+    <h1>{{ crop.capitalize() }} Prediction Result</h1>
     <p><strong>Disease Detected:</strong> {{ disease }}</p>
     <p><strong>Recommended Action:</strong> {{ recommendation }}</p>
-    <a href="/">Go back to upload another image</a>
+    <a href="{{ url_for('upload', crop=crop) }}">Upload another image</a>
+    <a href="{{ url_for('index') }}">Go back to Home</a>
 </body>
 </html>
+
