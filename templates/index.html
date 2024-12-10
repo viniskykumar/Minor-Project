@@ -160,7 +160,7 @@
             <div class="product__container grid">
 
                 <article class="product__card">
-                    <a href="#">
+                    <a href="{{ url_for('upload', crop='corn') }}">
                         <div class="product__circle"></div>
 
                         <img src="{{ url_for('static', filename='assets/img/corn2.png') }}" alt="" class="product__img">
@@ -176,7 +176,7 @@
 
 
                 <article class="product__card">
-                    <a href="{{ url_for('upload') }}">
+                    <a href="{{ url_for('upload', crop='tomato') }}">
                         <div class="product__circle"></div>
 
                         <img src="{{ url_for('static', filename='assets/img/tomato2.png') }}" alt="" class="product__img">
@@ -204,7 +204,7 @@
                 </article>
 
                 <article class="product__card">
-                    <a href="#">
+                    <a href="{{ url_for('upload', crop='potato') }}">
                         <div class="product__circle"></div>
 
                         <img src="{{ url_for('static', filename='assets/img/potato2.png') }}" alt="" class="product__img">
