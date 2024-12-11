@@ -76,8 +76,6 @@ The project utilizes the following tools and frameworks:
 - **Deep Learning Frameworks**: TensorFlow, Keras, PyTorch  
 - **Frontend**: HTML, CSS, ReactJS  
 - **Backend**: Flask/Django  
-- **Database**: MySQL/PostgreSQL  
-- **Cloud Platforms**: AWS/GCP for deployment and storage  
 - **Version Control**: GitHub  
 
 ---
