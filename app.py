@@ -32,15 +32,15 @@ crop_details = {
     },
     # Add similar dictionaries for other crops
     'corn': {
-        'model_path': '/Users/kritika/Documents/MinorProjectFinal/Minor-Project/Detection_model/Maize_LDD_model.h5',
+        'model_path': '/Users/kritika/Documents/MinorProjectFinal/Minor-Project/Detection_model/Corn_LDD_model.h5',
         'class_labels': ['Cercospora leaf spot (Gray leaf spot)',
                 'Common rust',
                 'Northern Leaf Blight',
                 'healthy'],
         'recommendations': {
-            'Cercospora_leaf_spot_(Gray_leaf_spot)': "Hybrids with partial resistance to GLS are available. Ask your seed supplier for these hybrids. A two-year crop rotation away from corn is effective if reduced tillage must be maintained for conservation purposes, or a one-year rotation with clean plowing is recommended in fields that have had a problem with the disease.",
-    'Common_rust': "Use resistant/tolerant sweet corn products. Many sweet corn products have resistance genes that provide nearly complete control. Applying strobilurin- and sterol-inhibiting fungicides as a preventive measure.",
-    'Northern_Leaf_Blight': "Management of Northern Leaf Blight can be achieved primarily by using hybrids with resistance, but because resistance may not be complete or may fail, it is advantageous to utilize an integrated approach with different cropping practices and fungicides.",
+            'Cercospora leaf spot (Gray leaf spot)': "Hybrids with partial resistance to GLS are available. Ask your seed supplier for these hybrids. A two-year crop rotation away from corn is effective if reduced tillage must be maintained for conservation purposes, or a one-year rotation with clean plowing is recommended in fields that have had a problem with the disease.",
+    'Common rust': "Use resistant/tolerant sweet corn products. Many sweet corn products have resistance genes that provide nearly complete control. Applying strobilurin- and sterol-inhibiting fungicides as a preventive measure.",
+    'Northern Leaf Blight': "Management of Northern Leaf Blight can be achieved primarily by using hybrids with resistance, but because resistance may not be complete or may fail, it is advantageous to utilize an integrated approach with different cropping practices and fungicides.",
     'healthy': "No action required, plant is healthy! :)"
         }
     },
