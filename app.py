@@ -54,7 +54,38 @@ crop_details = {
         'Potato__Late_blight': "Apply fungicides immediately after symptoms appear, and remove infected plant material.",
         'Potato__healthy': "No action required, plant is healthy! :)"
     }
+},
+    'grapes': {
+        'model_path': 'Detection_model/Grapes_LDD_model.h5',
+        'class_labels': [ 'Black Rot',
+                'Esca (Black Measles)',
+                'Leaf Blight (Isariopsis Leaf Spot)',
+                'healthy'],
+        'recommendations': {
+            'Black Rot': "Action: Remove and destroy infected leaves or fruit to reduce fungal spread. Apply fungicides such as mancozeb or myclobutanil during the growing season.",
+    'Esca (Black Measles)': "Prune infected wood during the dormant season. Avoid injuring the vines to prevent fungal entry. If infection is severe, consider removing the vine.",
+    'Leaf Blight (Isariopsis Leaf Spot)': "Improve air circulation around the grapevine by pruning overcrowded leaves. Apply a copper-based fungicide to control the spread.",
+    'healthy': "No action required, plant is healthy! :)"
+        }
+},
+    'cotton': {
+        'model_path': 'Detection_model/Cotton_LDD_model.h5',
+        'class_labels': [ 'diseased cotton leaf',
+                'diseased cotton plant',
+                'fresh cotton leaf',
+                'fresh cotton plant'],
+    'recommendations': {
+    'diseased cotton leaf': "Remove infected leaves and dispose of them away from the field to prevent the spread of pathogens. Apply fungicides such as copper-based or systemic fungicides to control the disease. Ensure proper plant spacing to improve air circulation and reduce humidity.",
+    'diseased cotton plant': "Isolate and destroy severely diseased plants to prevent the spread of infection. Treat the soil with biofungicides or chemical fungicides. Implement Integrated Pest Management (IPM) practices, including crop rotation and the use of resistant varieties. Maintain soil health with organic matter and balanced fertilizers.",
+    'fresh cotton leaf': "Maintain good cultural practices like balanced fertilization, regular irrigation, and weed control. Use preventive fungicide sprays to protect against potential diseases. Monitor leaves for pests like aphids or whiteflies, and take prompt action if detected.",
+    'fresh cotton plant': "Support healthy plant growth with proper fertilization, including nitrogen, phosphorus, and potassium. Regularly monitor for pests such as bollworms and apply control measures as needed. Maintain a consistent irrigation schedule and use mulch to retain soil moisture and suppress weeds."
 }
+
+
+    }
+
+
+
 
 
 }
