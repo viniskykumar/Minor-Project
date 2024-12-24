@@ -1,110 +1,132 @@
-/* Reset & General Styling */
+/* General Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8fdf8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Header */
-.header {
-    background-color: #4CAF50;
-    padding: 1rem;
-}
-.nav__logo {
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-}
-.change-theme {
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-.change-theme:hover {
-    color: #f4f4f9;
+/* Main Section Styling */
+.upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
 }
 
-/* Home Form Section */
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-.home__container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-}
-.home__title {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    color: #333;
+/* Card Container */
+.card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
 }
 
-/* Custom Choose File Button */
-.choose-file-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #006400; /* Dark green */
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-    margin-bottom: 1rem;
-    font-weight: bold;
+/* Title and Subtitle */
+.upload-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c5f2d; /* Dark Green */
+  margin-bottom: 1rem;
 }
-.choose-file-button:hover {
-    background-color: #004d00; /* Darker green on hover */
+.upload-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
-/* Upload Button */
+/* Button Styling */
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.choose-button {
+  background-color: #4caf50;
+  margin-right: 0.5rem;
+}
+.choose-button:hover {
+  background-color: #45a049;
+}
+
 .upload-button {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: #4CAF50; /* Bright green */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  background-color: #2c5f2d;
 }
 .upload-button:hover {
-    background-color: #45a049; /* Slightly darker green */
+  background-color: #1f4120;
+}
+
+/* File Input Wrapper */
+.file-input-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Image Preview */
 .image-preview {
-    margin: 1rem 0;
+  margin-top: 1rem;
 }
 .image-preview img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Footer */
-.footer {
-    background-color: #f4f4f9;
-    text-align: center;
-    padding: 1rem 0;
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upload-title {
+    font-size: 1.8rem;
+  }
+  .upload-subtitle {
     font-size: 0.9rem;
-    color: #555;
+  }
+  .button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-title {
+    font-size: 1.5rem;
+  }
+  .button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
 }
