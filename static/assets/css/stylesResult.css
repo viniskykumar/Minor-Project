@@ -60,86 +60,103 @@ body {
 .result__content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column; /* Stack elements vertically */
   align-items: flex-start;
   gap: 2rem;
 }
+
 .leaf-image {
-  flex: 1 1 40%;
-  max-width: 40%;
+  align-self: center; /* Center image in the container */
+  max-width: 100%;
 }
+
 .leaf-image img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 .prediction-details {
-  flex: 1 1 55%;
   text-align: left;
+  width: 100%; /* Take full width */
 }
+
 .prediction-details h2 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 1rem;
 }
+
 .prediction-details span {
   font-size: 1.5rem;
   color: #3c8e68;
   font-weight: 700;
-  /* text-decoration: underline; */
 }
+
 .recommend-title {
   font-size: 1.3rem;
   font-weight: 600;
   margin: 1rem 0 0.5rem;
 }
+
 .recommend-list {
   list-style-type: disc;
   margin: 0;
   padding-left: 1.5rem;
   font-size: 1.1rem;
 }
+
 .recommend-list li {
   margin: 0.5rem 0;
   color: #555;
 }
 
-/* Medicine Gallery */
+/* Medicine Section */
 .result__medicine {
-  margin: 2rem 0;
+  text-align: left; /* Align to the left to match actions */
+  width: 100%; /* Ensure it spans full width below actions */
 }
+
 .result__medicine h3 {
   font-size: 1.5rem;
   color: #2e7d32;
   margin-bottom: 1rem;
 }
+
 .medicine-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
+
+
 .medicine-card {
-  width: 150px;
-  text-align: center;
-}
-.medicine-card img {
-  width: 35rem;
-  height: 15rem;
+  width: 100%; /* Take full width of the parent gallery */
+  max-width: 400px; /* Restrict the width to a max value */
+  aspect-ratio: 16 / 9; /* Ensure the box has a fixed aspect ratio */
+  overflow: hidden; /* Prevent the image from spilling outside the box */
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* Ensure child elements position relative to the container */
 }
-.medicine-card p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
+
+/* Image inside the Container */
+.medicine-card img {
+  width: 100%; /* Stretch to fill the container's width */
+  height: 100%; /* Stretch to fill the container's height */
+  object-fit: contain; /* Adjust the image to fit within the container */
+  position: absolute; /* Cover the entire container */
+  top: 0;
+  left: 0;
 }
 
 /* Buttons */
 .result__buttons {
   margin-top: 2rem;
 }
+
 .button {
   display: inline-block;
   text-decoration: none;
@@ -151,6 +168,7 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
 .button:hover {
   background-color: #2e7d32;
 }
@@ -161,23 +179,33 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   .leaf-image {
     max-width: 100%;
   }
+
   .prediction-details {
     text-align: center;
   }
+
   .result__title {
     font-size: 2rem;
   }
+
   .recommend-list li {
     font-size: 1rem;
   }
+
+  .result__medicine {
+    text-align: center;
+  }
 }
+
 @media (max-width: 480px) {
   .result__title {
     font-size: 1.8rem;
   }
+
   .button {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;

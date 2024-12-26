@@ -60,16 +60,16 @@ crop_details = {
             }
         },
         'medicines': {
-            'Tomato_mosaic_virus': 'static/medicines/Tomato_mosaic_virus_medicine.jpg',
-            'Target_Spot': 'static/medicines/Target_Spot_medicine.jpg',
-            'Bacterial_spot': 'static/medicines/Bacterial_spot_medicine.jpg',
-            'Tomato_Yellow_Leaf_Curl_Virus': 'static/medicines/Tomato_Yellow_Leaf_Curl_Virus_medicine.jpg',
-            'Late_blight': 'static/medicines/Late_blight_medicine.jpg',
-            'Leaf_Mold': 'static/medicines/Leaf_Mold_medicine.jpg',
-            'Early_blight': 'static/medicines/Early_blight_medicine.jpg',
-            'Spider_mites Two-spotted_spider_mite': 'static/medicines/Spider_mites_medicine.jpg',
+            'Tomato_mosaic_virus': 'mosaicVirus_tomato.jpeg',
+            'Target_Spot': 'targetSpot_tomato.png',
+            'Bacterial_spot': 'bacterialSpot_tomato.png',
+            'Tomato_Yellow_Leaf_Curl_Virus': 'yellowLeafCurl_tomato.png',
+            'Late_blight': 'lateBlight_tomato.jpeg',
+            'Leaf_Mold': 'leafMold_tomato.jpeg',
+            'Early_blight': 'earlyBlight_tomato.jpeg',
+            'Spider_mites Two-spotted_spider_mite': 'spiderMites_tomato.jpeg',
             'Tomato___healthy': None,
-            'Septoria_leaf_spot': 'static/medicines/Septoria_leaf_spot_medicine.jpg'
+            'Septoria_leaf_spot': 'septoriaLeafSpot_tomato.jpeg'
         }
     },
     'corn': {
@@ -99,9 +99,9 @@ crop_details = {
             }
         },
         'medicines': {
-            'Cercospora leaf spot (Gray leaf spot)': 'static/medicines/Cercospora_leaf_spot_medicine.jpg',
-            'Common rust': 'Common_rust_medicine.jpg',
-            'Northern Leaf Blight': 'Northern_Leaf_Blight_medicine.jpg',
+            'Cercospora leaf spot (Gray leaf spot)': 'grayLeafSpot_corn.png',
+            'Common rust': 'commonRust_corn.png',
+            'Northern Leaf Blight': 'northernLeafBlight_corn.jpg',
             'healthy': None
         }
     },
@@ -125,8 +125,8 @@ crop_details = {
             }
         },
         'medicines': {
-            'Potato__Early_blight': 'static/medicines/Potato_Early_blight_medicine.jpg',
-            'Potato__Late_blight': 'static/medicines/Potato_Late_blight_medicine.jpg',
+            'Potato__Early_blight': 'earlyBlight_potato.png',
+            'Potato__Late_blight': 'lateBlight_potato.png',
             'Potato__healthy': None
         }
     },
@@ -157,9 +157,9 @@ crop_details = {
             }
         },
         'medicines': {
-            'Black Rot': 'static/medicines/Black_Rot_medicine.jpg',
-            'Esca (Black Measles)': 'static/medicines/Esca_Black_Measles_medicine.jpg',
-            'Leaf Blight (Isariopsis Leaf Spot)': 'static/medicines/Leaf_Blight_medicine.jpg',
+            'Black Rot': 'blackRot_grape.jpeg',
+            'Esca (Black Measles)': 'esca_grape.jpeg',
+            'Leaf Blight (Isariopsis Leaf Spot)': 'leafBlight_grape.jpeg',
             'healthy': None
         }
     },
@@ -190,10 +190,10 @@ crop_details = {
             }
         },
         'medicines': {
-            'diseased cotton leaf': 'static/medicines/diseased_cotton_leaf_medicine.jpg',
-            'diseased cotton plant': 'static/medicines/diseased_cotton_plant_medicine.jpg',
-            'fresh cotton leaf': 'static/medicines/fresh_cotton_leaf_medicine.jpg',
-            'fresh cotton plant': 'static/medicines/fresh_cotton_plant_medicine.jpg'
+            'diseased cotton leaf': 'diseasedCottonLeaf.jpeg',
+            'diseased cotton plant': 'diseasedCottonLeaf.jpeg',
+            'fresh cotton leaf': None,
+            'fresh cotton plant': None
         }
     }
 }
