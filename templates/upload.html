@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ crop.capitalize() }} Disease Detection</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/stylesUpload.css') }}">
 </head>
+
 <body>
     <main class="main">
-        <section class="home">
-            <div class="home__container container">
-                <h1 class="home__title">Upload an Image of the {{ crop.capitalize() }} Plant</h1>
-                <form action="{{ url_for('predict', crop=crop) }}" method="post" enctype="multipart/form-data" class="home__form" id="uploadForm">
-                    <input type="file" name="file" id="fileInput" style="display: none;" required>
-                    <label for="fileInput" class="choose-file-button">Choose File</label>
-                    <button type="submit" class="button upload-button">Predict Disease</button>
+        <!-- Centered Form Section -->
+        <section class="upload-section">
+            <div class="card">
+                <h1 class="upload-title">{{ crop.capitalize() }} Disease Detection</h1>
+                <p class="upload-subtitle">Upload an image of the infected {{ crop }} plant to detect the disease and
+                    get accurate recommendations.</p>
+                <form action="{{ url_for('predict', crop=crop) }}" method="post" enctype="multipart/form-data"
+                    id="uploadForm">
+                    <div class="file-input-wrapper">
+                        <input type="file" name="file" id="fileInput" style="display: none;" required>
+                        <label for="fileInput" class="button choose-button">Choose Image</label>
+                        <button type="submit" class="button upload-button">Predict Disease</button>
+                    </div>
                 </form>
                 <div id="imagePreview" class="image-preview"></div>
-                <a href="{{ url_for('index') }}" class="button button--link">Go back to Home</a>
             </div>
         </section>
     </main>
+
     <script>
-        document.getElementById('fileInput').addEventListener('change', function(event) {
+        document.getElementById('fileInput').addEventListener('change', function (event) {
             const file = event.target.files[0];
             const preview = document.getElementById('imagePreview');
-        
+
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.innerHTML = `<img src="${e.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;" />`;
+                reader.onload = function (e) {
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Image Preview" />`;
                 };
                 reader.readAsDataURL(file);
             }
         });
-        </script>
-        
+    </script>
 </body>
-</html>
 
+</html>

@@ -1,59 +1,213 @@
-/* ================== Global Styles ================== */
+/* ================== CSS - stylesResult.css ================== */
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-    font-family: "Poppins", sans-serif; /* Choose a modern, clean font */
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff; /* Light background color for better contrast */
-    color: #333; /* Dark text color for readability */
-    display: flex;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fbf5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #e8f5e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav__home-link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #388e3c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav__home-link:hover {
+  color: #2e7d32;
+}
+
+/* Result Section */
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 3rem 1rem;
+}
+.result__container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Flex Layout for Image and Details */
+.result__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.leaf-image {
+  align-self: center; /* Center image in the container */
+  max-width: 100%;
+}
+
+.leaf-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prediction-details {
+  text-align: left;
+  width: 100%; /* Take full width */
+}
+
+.prediction-details h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.prediction-details span {
+  font-size: 1.5rem;
+  color: #3c8e68;
+  font-weight: 700;
+}
+
+.recommend-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+}
+
+.recommend-list {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.recommend-list li {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* Medicine Section */
+.result__medicine {
+  text-align: left; /* Align to the left to match actions */
+  width: 100%; /* Ensure it spans full width below actions */
+}
+
+.result__medicine h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.medicine-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.medicine-card {
+  width: 100%; /* Take full width of the parent gallery */
+  max-width: 400px; /* Restrict the width to a max value */
+  aspect-ratio: 16 / 9; /* Ensure the box has a fixed aspect ratio */
+  overflow: hidden; /* Prevent the image from spilling outside the box */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* Ensure child elements position relative to the container */
+}
+
+/* Image inside the Container */
+.medicine-card img {
+  width: 100%; /* Stretch to fill the container's width */
+  height: 100%; /* Stretch to fill the container's height */
+  object-fit: contain; /* Adjust the image to fit within the container */
+  position: absolute; /* Cover the entire container */
+  top: 0;
+  left: 0;
+}
+
+/* Buttons */
+.result__buttons {
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #388e3c;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2e7d32;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .result__content {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full height for centering content */
+  }
+
+  .leaf-image {
+    max-width: 100%;
+  }
+
+  .prediction-details {
+    text-align: center;
+  }
+
+  .result__title {
+    font-size: 2rem;
+  }
+
+  .recommend-list li {
+    font-size: 1rem;
+  }
+
+  .result__medicine {
+    text-align: center;
+  }
 }
 
-h1 {
-    font-size: 2.5rem; /* Larger title for impact */
-    color: #4CAF50; /* Dark green color for headings */
-    margin-bottom: 1rem; /* Spacing below the title */
-}
+@media (max-width: 480px) {
+  .result__title {
+    font-size: 1.8rem;
+  }
 
-p {
-    font-size: 1.2rem; /* Slightly larger text for readability */
-    margin: 0.5rem 0; /* Spacing between paragraphs */
-    text-align: center; /* Center align for aesthetics */
-}
-
-strong {
-    color: #4CAF50; /* Green color for important information */
-}
-
-a {
-    display: inline-block; /* Make link look like a button */
-    margin-top: 2rem; /* Spacing above the link */
-    padding: 0.75rem 1.5rem; /* Padding for button effect */
-    font-size: 1.2rem; /* Larger font for the link */
-    color: #fff; /* White text color for contrast */
-    background-color: #4CAF50; /* Green background for the button */
-    text-decoration: none; /* Remove underline from link */
-    border-radius: 5px; /* Rounded corners for a modern look */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-a:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-/* ================== Responsive Design ================== */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem; /* Smaller title on mobile */
-    }
-    p {
-        font-size: 1rem; /* Smaller text on mobile */
-    }
-    a {
-        font-size: 1rem; /* Smaller button on mobile */
-        padding: 0.5rem 1rem; /* Smaller padding for the button */
-    }
+  .button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
 }

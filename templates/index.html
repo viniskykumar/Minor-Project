@@ -37,7 +37,7 @@
                         <a href="#products" class="nav__link">Products</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#crop-recommendation" class="nav__link">Crop Recommendations</a>
+                        <a href="#crop-recommendations" class="nav__link">Crop Recommendations</a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">Contact Us</a>
@@ -86,7 +86,7 @@
                 <img src="{{ url_for('static', filename='assets/img/about.png') }}" alt="" class="about__img">
 
                 <div class="about__data">
-                    <h2 class="section__title about__title">
+                    <h2 class="section_title about_title">
                         Who we are & <br> why choose us
                     </h2>
 
@@ -118,7 +118,7 @@
         <!--==================== STEPS ====================-->
         <section class="steps section container">
             <div class="steps__bg">
-                <h2 class="section__title-center steps__title">
+                <h2 class="section_title-center steps_title">
                     How to use the application for <br> disease detection.
                 </h2>
 
@@ -151,7 +151,7 @@
             </div>
         </section>
 
-        <!--==================== PRODUCTS ====================-->
+        <!--==================== Diseases Prediction ====================-->
         <section class="product section container" id="products">
             <h2 class="section__title-center">
                 Disease detector
@@ -166,7 +166,6 @@
                         <img src="{{ url_for('static', filename='assets/img/corn2.png') }}" alt="" class="product__img">
 
                         <h3 class="product__title">Corn</h3>
-
                         <!-- <button class="button--flex product__button">
                         <i class="ri-leaf-fill-line"></i>
                     </button> -->
@@ -179,27 +178,28 @@
                     <a href="{{ url_for('upload', crop='tomato') }}">
                         <div class="product__circle"></div>
 
-                        <img src="{{ url_for('static', filename='assets/img/tomato2.png') }}" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/tomato2.png') }}" alt=""
+                            class="product__img">
 
                         <h3 class="product__title">Tomato</h3>
 
                         <!-- <button class="button--flex product__button">
-                        <i class="ri-leaf-fill-line"></i>
-                    </button> -->
+                    <i class="ri-leaf-fill-line"></i>
+                </button> -->
                     </a>
                 </article>
 
                 <article class="product__card">
                     <a href="{{ url_for('upload', crop='grapes') }}">
                         <div class="product__circle"></div>
-
-                        <img src="{{ url_for('static', filename='assets/img/grapes2.png') }}" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/grapes2.png') }}" alt=""
+                            class="product__img">
 
                         <h3 class="product__title">Grapes</h3>
 
                         <!-- <button class="button--flex product__button">
-                        <i class="ri-leaf-fill-line"></i>
-                    </button> -->
+                    <i class="ri-leaf-fill-line"></i>
+                </button> -->
                     </a>
                 </article>
 
@@ -207,13 +207,14 @@
                     <a href="{{ url_for('upload', crop='potato') }}">
                         <div class="product__circle"></div>
 
-                        <img src="{{ url_for('static', filename='assets/img/potato2.png') }}" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/potato2.png') }}" alt=""
+                            class="product__img">
 
                         <h3 class="product__title">Potato</h3>
 
                         <!-- <button class="button--flex product__button">
-                        <i class="ri-leaf-fill-line"></i>
-                    </button> -->
+                    <i class="ri-leaf-fill-line"></i>
+                </button> -->
                     </a>
                 </article>
 
@@ -221,21 +222,25 @@
                     <a href="{{ url_for('upload', crop='cotton') }}">
                         <div class="product__circle"></div>
 
-                        <img src="{{ url_for('static', filename='assets/img/cotton2.png') }}" alt="" class="product__img">
+                        <img src="{{ url_for('static', filename='assets/img/cotton2.png') }}" alt=""
+                            class="product__img">
 
                         <h3 class="product__title">Cotton</h3>
 
                         <!-- <button class="button--flex product__button">
-                        <i class="ri-leaf-fill-line"></i>
-                    </button> -->
+                    <i class="ri-leaf-fill-line"></i>
+                </button> -->
                     </a>
                 </article>
             </div>
         </section>
 
         <!--==================== Crop-recommendations ====================-->
+
+
         <section class="questions section" id="crop-recommendations">
-            <h2 class="section__title-center questions__title container">
+
+            <h2 class="section_title-center questions_title container">
                 Crop Recommendations <br> System
             </h2>
 
@@ -293,7 +298,6 @@
                             <a href="#"><i class="ri-linkedin-box-fill"></i></a>
                         </div>
                     </div>
-
                     <!-- Team Member Card for Manya -->
                     <div class="team-member">
                         <!-- <img src="manya.jpg" alt="Manya" class="team-photo"> -->
@@ -318,7 +322,6 @@
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
-
     <!--=============== SCROLL REVEAL ===============-->
     <script src="{{ url_for('static', filename='assets/js/scrollreveal.min.js') }}"></script>
 

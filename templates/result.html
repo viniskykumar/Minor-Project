@@ -1,17 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ crop.capitalize() }} Disease Prediction Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/stylesResult.css') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>{{ crop.capitalize() }} Prediction Result</h1>
-    <p><strong>Disease Detected:</strong> {{ disease }}</p>
-    <p><strong>Recommended Action:</strong> {{ recommendation }}</p>
-    <a href="{{ url_for('upload', crop=crop) }}">Upload another image</a>
-    <a href="{{ url_for('index') }}">Go back to Home</a>
-</body>
-</html>
 
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}" class="nav__home-link">
+                &#x1F331; Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Result Section -->
+    <main class="result">
+        <div class="result__container">
+            <!-- Flexbox Layout for Image and Details -->
+            <div class="result__content">
+
+                <!-- Disease Details Section -->
+                <div class="prediction-details">
+                    <h2>Disease Detected: <span>{{ disease }}</span></h2>
+                    <p class="recommend-title">Recommended Actions:</p>
+                    <ul class="recommend-list">
+                        {% if disease in crop_data['recommendations'] %}
+                        <li>{{ crop_data['recommendations'][disease]['text'] }}</li>
+                        {% else %}
+                        <li>No specific recommendations available.</li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <!-- Medicine Section -->
+                <div class="result__medicine">
+                    <h3>Recommended Medicines</h3>
+                    <div class="medicine-gallery">
+                        {% if disease in crop_data['medicines'] and crop_data['medicines'][disease] %}
+                        <div class="medicine-card">
+                            <img src="{{ url_for('static', filename='assets/img/Medicines/' + crop_data['medicines'][disease]) }}"
+                                alt="Medicine for {{ disease }}">
+                            <!-- <p>Recommended Medicine for {{ disease }}</p> -->
+                        </div>
+                        {% else %}
+                        <p>No specific medicine Needed.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button Section -->
+            <div class="result__buttons">
+                <a href="{{ url_for('upload', crop=crop) }}" class="button">Upload Another Image</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
